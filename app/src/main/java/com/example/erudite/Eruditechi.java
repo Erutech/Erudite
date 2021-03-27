@@ -22,6 +22,10 @@ public abstract class Eruditechi {
         return xp;
     }
 
+    public int getLvl(int lvl) {
+        return lvl;
+    }
+
     public int getXpMax() {
         return xpMax;
     }
@@ -53,6 +57,10 @@ public abstract class Eruditechi {
         this.xpMax = xpMax;
     }
 
+    public void setLvl(int lvl) {
+        this.lvl = lvl;
+    }
+
     public void setCurrEvo(String currEvo) {
         this.currEvo = currEvo;
     }
@@ -78,7 +86,8 @@ public abstract class Eruditechi {
 
     public void lvlup() {   
         lvl++;
-        xpMax = xp + lvl*5;
+        xpMax = lvl*5;
+        xp = 0;
         for(int i = 0; i < evolveLvls.length; i++) {
             if(evolveLvls[i] == lvl) {
                 evolve();
