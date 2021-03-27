@@ -12,7 +12,7 @@
         android:layout_height="833dp"
         android:layout_marginStart="3dp"
         android:layout_marginEnd="4dp"
-        android:contentDescription="TODO"
+        android:contentDescription='"@string/green baby dragon"'
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
