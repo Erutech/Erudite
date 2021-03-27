@@ -1,7 +1,7 @@
 package com.example.erudite;
 
 public abstract class Eruditechi {
-    int[] evolveLvls = {5, 16};
+    int[] evolveLvls = {5, 10};
     String specieName, nickname;
     int xp, xpMax;
     String currEvo, evoStages, image;
