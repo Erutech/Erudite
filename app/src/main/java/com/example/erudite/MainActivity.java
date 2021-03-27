@@ -8,26 +8,22 @@ import android.widget.ProgressBar;
 public class MainActivity extends AppCompatActivity {
 
     private Button menuBtn;
-
-    //private ProgressBar mProgressBar;
-    //private int mProgressStatus = 0;
-    //private Handler mHandler = new Handler();
+    private ProgressBar mProgressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        /*
-        mProgressBar = (ProgressBar) findViewById(R.id.progressBar3);
+        Erugon myErugon = new Erugon("Bud");
 
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                while(mProgressStatus < maxXp)
-            }
-        })
-        */
+
+        mProgressBar = (ProgressBar) findViewById(R.id.progressBar3);
+        mProgressBar.setMax(myErugon.getXpMax());
+        myErugon.setXp(2);
+        mProgressBar.setProgress(myErugon.getXp());
+
+
 
     }
 
