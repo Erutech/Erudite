@@ -1,0 +1,121 @@
+{
+  "results": [
+    {
+      "userId": "abc123",
+      "columnId": "assign1",
+      "status": "Graded",
+      "displayGrade": {
+        "scaleType": "Percent",
+        "score": 100,
+        "text": "string"
+      },
+      "text": "string",
+      "score": 100,
+      "overridden": "2021-03-27T19:00:16.320Z",
+      "notes": "string",
+      "feedback": "string",
+      "exempt": true,
+      "corrupt": true,
+      "gradeNotationId": "string",
+      "changeIndex": 0
+    },
+    {
+      "userId": "abc123",
+      "columnId": "assign2",
+      "status": "Graded",
+      "displayGrade": {
+        "scaleType": "Percent",
+        "score": 95,
+        "text": "string"
+      },
+      "text": "string",
+      "score": 95,
+      "overridden": "2021-03-27T19:00:16.320Z",
+      "notes": "string",
+      "feedback": "string",
+      "exempt": true,
+      "corrupt": true,
+      "gradeNotationId": "string",
+      "changeIndex": 0
+    },
+    {
+      "userId": "abc123",
+      "columnId": "assign3",
+      "status": "Graded",
+      "displayGrade": {
+        "scaleType": "Percent",
+        "score": 80,
+        "text": "string"
+      },
+      "text": "string",
+      "score": 80,
+      "overridden": "2021-03-27T19:00:16.320Z",
+      "notes": "string",
+      "feedback": "string",
+      "exempt": true,
+      "corrupt": true,
+      "gradeNotationId": "string",
+      "changeIndex": 0
+    },
+    {
+      "userId": "abc123",
+      "columnId": "assign4",
+      "status": "Graded",
+      "displayGrade": {
+        "scaleType": "Percent",
+        "score": 100,
+        "text": "string"
+      },
+      "text": "string",
+      "score": 100,
+      "overridden": "2021-03-27T19:00:16.320Z",
+      "notes": "string",
+      "feedback": "string",
+      "exempt": true,
+      "corrupt": true,
+      "gradeNotationId": "string",
+      "changeIndex": 0
+    },
+    {
+      "userId": "abc123",
+      "columnId": "assign5",
+      "status": "Graded",
+      "displayGrade": {
+        "scaleType": "Percent",
+        "score": 90,
+        "text": "string"
+      },
+      "text": "string",
+      "score": 90,
+      "overridden": "2021-03-27T19:00:16.320Z",
+      "notes": "string",
+      "feedback": "string",
+      "exempt": true,
+      "corrupt": true,
+      "gradeNotationId": "string",
+      "changeIndex": 0
+    },
+    {
+      "userId": "abc123",
+      "columnId": "assign6",
+      "status": "Graded",
+      "displayGrade": {
+        "scaleType": "Percent",
+        "score": 80,
+        "text": "string"
+      },
+      "text": "string",
+      "score": 80,
+      "overridden": "2021-03-27T19:00:16.320Z",
+      "notes": "string",
+      "feedback": "string",
+      "exempt": true,
+      "corrupt": true,
+      "gradeNotationId": "string",
+      "changeIndex": 0
+    }
+  ],
+  "paging": {
+    "nextPage": "string"
+  }
+}
