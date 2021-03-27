@@ -2,9 +2,12 @@ package com.example.erudite;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.ProgressBar;
 
 public class MainActivity extends AppCompatActivity {
+
+    private Button menuBtn;
 
     //private ProgressBar mProgressBar;
     //private int mProgressStatus = 0;
@@ -26,5 +29,9 @@ public class MainActivity extends AppCompatActivity {
         })
         */
 
+    }
+
+    public void openMenu() {
+        //Intent intent = new Intent(this, menu)
     }
 }

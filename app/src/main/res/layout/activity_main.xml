@@ -77,7 +77,7 @@
         app:srcCompat="@drawable/erudite" />
 
     <ImageButton
-        android:id="@+id/imageButton4"
+        android:id="@+id/menuBtn"
         android:layout_width="42dp"
         android:layout_height="26dp"
         android:background="@drawable/greyhamburger"
