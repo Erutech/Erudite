@@ -73,7 +73,7 @@ public abstract class Eruditechi {
     /** extra functions **/
     public void gainxp(int score) {
         int gainedxp;
-        gainedxp = Math.ceil(score/10);
+        gainedxp = (int) Math.ceil(score/10);
         for(int i = 0; i < gainedxp; i++) {
             xp++;
             xpMax--;
@@ -95,8 +95,7 @@ public abstract class Eruditechi {
         }
     }
 
-    public void evolve() {
-        //TODO: change curr evo and image
-    }
+    public abstract void evolve();
+    public abstract void updateImage();
 
 }
