@@ -76,4 +76,16 @@
         app:layout_constraintStart_toEndOf="@+id/progressBar3"
         app:srcCompat="@drawable/erudite" />
 
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="42dp"
+        android:layout_height="26dp"
+        android:background="@drawable/threelines_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.039" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
