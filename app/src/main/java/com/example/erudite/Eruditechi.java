@@ -1,10 +1,12 @@
 package com.example.erudite;
+import java.lang.Math;
 
 public abstract class Eruditechi {
-    int[] evolveLvls = {5, 16};
+    int[] evolveLvls = {5, 10};
     String specieName, nickname;
-    int xp, xpMax;
-    String currEvo, evoStages, image;
+    int xp, xpMax, lvl;
+    String[] evoStages;
+    String currEvo, image;
 
     /**
      * getters
@@ -29,7 +31,7 @@ public abstract class Eruditechi {
         return currEvo;
     }
 
-    public String getEvoStages() {
+    public String[] getEvoStages() {
         return evoStages;
     }
 
@@ -60,7 +62,7 @@ public abstract class Eruditechi {
         this.currEvo = currEvo;
     }
 
-    public void setEvoStages(String evoStages) {
+    public void setEvoStages(String[] evoStages) {
         this.evoStages = evoStages;
     }
 
@@ -70,15 +72,30 @@ public abstract class Eruditechi {
 
     /** extra functions **/
     public void gainxp(int score) {
-        //TODO: set xp and if reach max, lvlup
+        int gainedxp;
+        gainedxp = (int) Math.ceil(score/10);
+        for(int i = 0; i < gainedxp; i++) {
+            xp++;
+            xpMax--;
+            if(xpMax == 0) {
+                lvlup();
+            }
+            
+        }
+
     }
 
-    public void lvlup() {
-        //TODO: set lvl and if reach evo level, evolve
+    public void lvlup() {   
+        lvl++;
+        xpMax = xp + lvl*5;
+        for(int i = 0; i < evolveLvls.length; i++) {
+            if(evolveLvls[i] == lvl) {
+                evolve();
+            }
+        }
     }
 
-    public void evolve() {
-        //TODO: change curr evo and image
-    }
+    public abstract void evolve();
+    public abstract void updateImage();
 
 }
