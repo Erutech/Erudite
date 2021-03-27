@@ -7,7 +7,6 @@ public class Erugon extends Eruditechi {
         setNickname(nickname);
         setXp(0);
         setXpMax(5);
-        setEvoStages(new String[]{"Egg", "Baby Erugon", "Erugon"});
         setCurrEvo("Egg");
         setImage("egg.png");
     }
@@ -18,7 +17,6 @@ public class Erugon extends Eruditechi {
         // TODO: setXp
         // TODO: setXpMax for initial max xp at level
         // TODO:
-        setEvoStages(new String[]{"Egg", "Baby Erugon", "Erugon"});
         setCurrEvo("");
         setImage("");
     }
@@ -27,6 +25,9 @@ public class Erugon extends Eruditechi {
     public void evolve() {
         // TODO: change curr evo and image
         // if Egg, change to Baby Erugon
+        if (getCurrEvo() == "Egg") {
+
+        }
         // if Baby Erugon, change to Erugon
     }
 
