@@ -5,7 +5,6 @@ public abstract class Eruditechi {
     int[] evolveLvls = {5, 10};
     String specieName, nickname;
     int xp, xpMax, lvl;
-    String[] evoStages;
     String currEvo, image;
 
     /**
@@ -23,16 +22,16 @@ public abstract class Eruditechi {
         return xp;
     }
 
+    public int getLvl(int lvl) {
+        return lvl;
+    }
+
     public int getXpMax() {
         return xpMax;
     }
 
     public String getCurrEvo() {
         return currEvo;
-    }
-
-    public String[] getEvoStages() {
-        return evoStages;
     }
 
     public String getImage() {
@@ -58,12 +57,12 @@ public abstract class Eruditechi {
         this.xpMax = xpMax;
     }
 
-    public void setCurrEvo(String currEvo) {
-        this.currEvo = currEvo;
+    public void setLvl(int lvl) {
+        this.lvl = lvl;
     }
 
-    public void setEvoStages(String[] evoStages) {
-        this.evoStages = evoStages;
+    public void setCurrEvo(String currEvo) {
+        this.currEvo = currEvo;
     }
 
     public void setImage(String image) {
@@ -87,7 +86,8 @@ public abstract class Eruditechi {
 
     public void lvlup() {   
         lvl++;
-        xpMax = xp + lvl*5;
+        xpMax = lvl*5;
+        xp = 0;
         for(int i = 0; i < evolveLvls.length; i++) {
             if(evolveLvls[i] == lvl) {
                 evolve();
