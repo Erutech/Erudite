@@ -5,7 +5,8 @@ public abstract class Eruditechi {
     int[] evolveLvls = {5, 10};
     String specieName, nickname;
     int xp, xpMax, lvl;
-    String currEvo, evoStages, image;
+    String[] evoStages;
+    String currEvo, image;
 
     /**
      * getters
@@ -30,7 +31,7 @@ public abstract class Eruditechi {
         return currEvo;
     }
 
-    public String getEvoStages() {
+    public String[] getEvoStages() {
         return evoStages;
     }
 
@@ -61,7 +62,7 @@ public abstract class Eruditechi {
         this.currEvo = currEvo;
     }
 
-    public void setEvoStages(String evoStages) {
+    public void setEvoStages(String[] evoStages) {
         this.evoStages = evoStages;
     }
 
