@@ -23,7 +23,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     public static final String COLUMN_ERU_ID = "ERU_ID";
 
     public DataBaseHelper(Context context) {
-        super(context, "user.db", null, 1);
+        super(context, "student_users.db", null, 1);
     }
 
     // this is called the first time a database is accessed. There should be code in here to create a new database.
