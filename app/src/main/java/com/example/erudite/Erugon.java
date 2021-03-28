@@ -1,6 +1,7 @@
 package com.example.erudite;
 
 public class Erugon extends Eruditechi {
+
     // constructor
     Erugon(String nickname) {
         setSpecieName("Erugon");

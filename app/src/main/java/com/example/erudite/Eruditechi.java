@@ -2,6 +2,7 @@ package com.example.erudite;
 import java.lang.Math;
 
 public abstract class Eruditechi {
+
     int[] evolveLvls = {5, 10};
     String specieName, nickname;
     int xp, xpMax, lvl;
@@ -75,8 +76,7 @@ public abstract class Eruditechi {
         gainedxp = (int) Math.ceil(score/10);
         for(int i = 0; i < gainedxp; i++) {
             xp++;
-            xpMax--;
-            if(xpMax == 0) {
+            if(xpMax == xp) {
                 lvlup();
             }
             
