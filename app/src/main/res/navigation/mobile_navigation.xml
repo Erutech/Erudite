@@ -20,6 +20,6 @@
     <fragment
         android:id="@+id/nav_profile"
         android:name="com.example.erudite.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_profile"
-        tools:layout="@layout/activity_profile" />
+        android:label="@string/menu_login"
+        tools:layout="@layout/activity_login" />
 </navigation>

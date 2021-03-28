@@ -90,25 +90,26 @@ give XP towards your eruditechi.The better you do, the quicker you level up!"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/imageView5"
         app:layout_constraintTop_toBottomOf="@+id/textView11"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.092" />
 
     <TextView
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
         android:layout_marginTop="40dp"
         android:fontFamily="@font/asap_medium"
         android:text="Erudite Crystals"
         android:textColor="#8D59BA"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@+id/textView7"
-        tools:layout_editor_absoluteX="177dp" />
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
     <TextView
         android:id="@+id/textView11"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="26dp"
         android:layout_marginTop="44dp"
         android:layout_marginEnd="132dp"
         android:fontFamily="@font/asap_medium"
@@ -117,6 +118,8 @@ give XP towards your eruditechi.The better you do, the quicker you level up!"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/textView10"
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
 
