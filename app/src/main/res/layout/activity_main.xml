@@ -10,9 +10,14 @@
     <!--Min = 0, Progress = xp, Max = xpMax -->
 
     <pl.droidsonroids.gif.GifImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/baby_erugon_animated"/>
+        android:layout_width="175dp"
+        android:layout_height="264dp"
+        android:src="@drawable/baby_erugon_animated"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar3"
+        app:layout_constraintVertical_bias="0.769" />
 
     <TextView
         android:id="@+id/textView"
