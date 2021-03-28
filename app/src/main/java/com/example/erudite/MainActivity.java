@@ -39,21 +39,10 @@ public class MainActivity extends AppCompatActivity {
 
         Erugon myErugon = new Erugon("Bud");
 
-
         mProgressBar = (ProgressBar) findViewById(R.id.progressBar3);
         mProgressBar.setMax(myErugon.getXpMax());
         myErugon.setXp(2);
         mProgressBar.setProgress(myErugon.getXp());
-
-
-
-        try {
-            get_json();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
 
         dataBaseHelper = new DataBaseHelper(MainActivity.this);
         ShowDataBaseOnListView(dataBaseHelper);
@@ -69,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
         ShowDataBaseOnListView(dataBaseHelper);
 
         button_viewALL.setOnClickListener((v) -> {
-            dataBaseHelper1 = new DataBaseHelper(MainActivity.this);
+            DataBaseHelper dataBaseHelper1 = new DataBaseHelper(MainActivity.this);
             ShowDataBaseOnListView(dataBaseHelper1);
         });
     }
@@ -87,8 +76,6 @@ public class MainActivity extends AppCompatActivity {
     /** Called when the user taps the profile card button */
     public void saveToDatabase(View view) {
         Intent intent = new Intent(this, DisplayMessageActivity.class);
-        EditText editText = (EditText) findViewById(R.id.editText);
-        String message = editText.getText().toString();
         startActivity(intent);
     }
 }
