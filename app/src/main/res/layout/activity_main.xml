@@ -12,55 +12,91 @@
         android:layout_height="833dp"
         android:layout_marginStart="3dp"
         android:layout_marginEnd="4dp"
+        android:contentDescription='"@string/green baby dragon"'
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.794"
+        app:layout_constraintVertical_bias="0.882"
         app:srcCompat="@drawable/bbdrago" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="151dp"
         android:layout_height="35dp"
-        android:fontFamily="@font/quicksand_medium"
-        android:text="Lil' Eru"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="4dp"
+        android:fontFamily="@font/asap_medium"
+        android:text="@string/lil_eru"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/progressBar3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.257"
+        app:layout_constraintHorizontal_bias="0.226"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.715" />
+        app:layout_constraintVertical_bias="1.0" />
 
+    <!--Min = 0, Progress = xp, Max = xpMax -->
     <ProgressBar
         android:id="@+id/progressBar3"
         style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="293dp"
-        android:layout_height="36dp"
+        android:layout_width="291dp"
+        android:layout_height="15dp"
         android:layout_marginStart="40dp"
+        android:paddingBottom="5dp"
+        android:progressDrawable="@drawable/customprogressbar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.346"
+        app:layout_constraintHorizontal_bias="0.243"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.766" />
+        app:layout_constraintVertical_bias="0.179" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="302dp"
         android:layout_marginTop="137dp"
         android:layout_marginEnd="45dp"
-        android:layout_marginBottom="677dp"
-        android:text="Example Name"
-        android:textSize="28sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintHorizontal_bias="0.772"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
+        android:fontFamily="@font/asap_medium"
+        android:text="TOOTHLESS"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.625"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.523" />
+        app:layout_constraintVertical_bias="0.712" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="31dp"
+        android:layout_height="37dp"
+        app:layout_constraintBottom_toBottomOf="@+id/progressBar3"
+        app:layout_constraintStart_toEndOf="@+id/progressBar3"
+        app:srcCompat="@drawable/erudite" />
+
+    <ImageButton
+        android:id="@+id/menuBtn"
+        android:layout_width="42dp"
+        android:layout_height="26dp"
+        android:background="@drawable/greyhamburger"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.039" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="saveToDatabase"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
