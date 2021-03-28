@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         mProgressBar.setMax(myErugon.getXpMax());
         myErugon.setXp(2);
         mProgressBar.setProgress(myErugon.getXp());
-
+*/
         dataBaseHelper = new DataBaseHelper(MainActivity.this);
         StudentModel studentModel;
         try {
@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText( MainActivity.this, "Error creating student", Toast.LENGTH_SHORT).show();
         }
         DataBaseHelper dataBaseHelper = new DataBaseHelper(MainActivity.this);
-        boolean sucess = dataBaseHelper.addOne(studentModel);*/
+        boolean sucess = dataBaseHelper.addOne(studentModel);
     }
 
     public void setProgressBar(Erugon myErugon) {
