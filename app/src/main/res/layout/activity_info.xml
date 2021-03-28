@@ -12,8 +12,9 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/asap_medium"
         android:text="ERUDITE"
-        android:textColor="#4C4C4C"
+        android:textColor="#633888"
         android:textSize="28sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,7 +28,7 @@
         android:text="Welcome to Erudite!\n\n\t\tHere you can grow your own study buddy as you
 progress through your school work!\n\n\t\tAchieving good grades and submitting your work
 give XP towards your eruditechi.The better you do, the quicker you level up!"
-        android:textColor="#454545"
+        android:textColor="#3C3C3C"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -63,33 +64,59 @@ give XP towards your eruditechi.The better you do, the quicker you level up!"
 
     <TextView
         android:id="@+id/textView9"
-        android:layout_width="178dp"
-        android:layout_height="70dp"
+        android:layout_width="175dp"
+        android:layout_height="54dp"
         android:layout_marginStart="37dp"
-        android:layout_marginTop="44dp"
-        android:text="Erudite Crystals\nXP Currency used to level up."
+        android:layout_marginTop="3dp"
+        android:text="XP Currency used to level up."
         android:textColor="#FF454545"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintHorizontal_bias="0.016"
         app:layout_constraintStart_toEndOf="@+id/imageView3"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
     <TextView
         android:id="@+id/textView10"
-        android:layout_width="191dp"
-        android:layout_height="114dp"
+        android:layout_width="192dp"
+        android:layout_height="78dp"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="56dp"
-        android:text="Eru Egg\nContains a study buddy, complete and receive grades to find out who!"
+        android:layout_marginBottom="48dp"
+        android:text="Contains a study buddy, complete and receive grades to find out who!"
         android:textColor="#FF454545"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/imageView5"
-        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/textView11"
         app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/asap_medium"
+        android:text="Erudite Crystals"
+        android:textColor="#8D59BA"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        tools:layout_editor_absoluteX="177dp" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:fontFamily="@font/asap_medium"
+        android:text="Erugon Egg"
+        android:textColor="#8D59BA"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        tools:layout_editor_absoluteX="177dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
