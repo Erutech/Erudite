@@ -19,6 +19,7 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     // references to buttons and other controls on the layout
@@ -68,14 +69,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void ShowDataBaseOnListView(DataBaseHelper dataBaseHelper){
-        studentArrayAdapter = new ArrayAdapter<StudentModel>(MainActivity.this, android.R.layout.simple_list_item_1, dataBaseHelper.getEverything());
+        studentArrayAdapter = new ArrayAdapter<StudentModel>(MainActivity.this, android.R.layout.simple_list_item_1, (List<StudentModel>) dataBaseHelper);
         lv_studentList.setAdapter(studentArrayAdapter);
-    }
-
-
-    /** Called when the user taps the profile card button */
-    public void saveToDatabase(View view) {
-        Intent intent = new Intent(this, DisplayMessageActivity.class);
-        startActivity(intent);
     }
 }
