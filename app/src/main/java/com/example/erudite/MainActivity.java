@@ -83,7 +83,8 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
 
-        StudentModel studentModel;
+        dataBaseHelperStudent = new DataBaseHelperStudent(this);
+        StudentModel studentModel = new StudentModel();
         try {
             dataBaseHelperStudent.addStudent(new StudentModel(1, "Beth", "hrx876", "cs2312, cs3425", "adorb123"));
             dataBaseHelperStudent.addStudent(new StudentModel(1, "Vanessa", "acb345", "cs4567", "sixx897"));
@@ -108,11 +109,11 @@ public class MainActivity extends AppCompatActivity {
         MonsterModel monsterModel = new MonsterModel();
         try {
             //populate some data
-            dataBaseHelperMonster.addMonster(new MonsterModel(1, "dragon", "Cutie", 10, 1, "adorb123"));
-            dataBaseHelperMonster.addMonster(new MonsterModel(2, "mushroom", "Mushy", 1, 50, "sixx897"));
-            dataBaseHelperMonster.addMonster(new MonsterModel(3, "mushroom", "Bloop", 200, 100, "other234"));
-            dataBaseHelperMonster.addMonster(new MonsterModel(4, "dragon", "Eru", 500, 20, "samp456"));
-            dataBaseHelperMonster.addMonster(new MonsterModel(5, "dragon", "Drago", 75, 4, "sdf234"));
+            dataBaseHelperMonster.addMonster(new MonsterModel(1, "Erugon", "Cutie", 10, 1, "adorb123"));
+            dataBaseHelperMonster.addMonster(new MonsterModel(2, "Psilobite", "Mushy", 1, 50, "sixx897"));
+            dataBaseHelperMonster.addMonster(new MonsterModel(3, "Psilobite", "Bloop", 200, 100, "other234"));
+            dataBaseHelperMonster.addMonster(new MonsterModel(4, "Erugon", "Eru", 500, 20, "samp456"));
+            dataBaseHelperMonster.addMonster(new MonsterModel(5, "Erugon", "Drago", 75, 4, "sdf234"));
             dataBaseHelperMonster.addMonster(new MonsterModel(1, "Psilobite", "Puppy", 10, 1, "sdf235"));
             dataBaseHelperMonster.addMonster(new MonsterModel(2, "Psilobite", "Toothless", 1, 50, "dfg645"));
             dataBaseHelperMonster.addMonster(new MonsterModel(3, "Psilobite", "Apple", 200, 100, "fgf976"));
