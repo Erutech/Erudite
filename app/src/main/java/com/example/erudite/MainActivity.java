@@ -62,6 +62,11 @@ public class MainActivity extends AppCompatActivity {
             dataBaseHelperStudent.addStudent(new StudentModel(1, "Theresa", "ids345", "cs2323", "other234"));
             dataBaseHelperStudent.addStudent(new StudentModel(1, "Jason", "mbd094", "cs4421, cs3213, cs2453", "samp456"));
             dataBaseHelperStudent.addStudent(new StudentModel(1, "Chris", "fdg234", "cs2345, cs7423, cs2345", "sdf234"));
+            dataBaseHelperStudent.addStudent(new StudentModel(1, "Anna", "sdf234", "mat3242, cs5634", "adorb123"));
+            dataBaseHelperStudent.addStudent(new StudentModel(1, "Tommy", "dfg456", "cs3462", "sixx897"));
+            dataBaseHelperStudent.addStudent(new StudentModel(1, "Claudia", "rty678", "cs2134", "other234"));
+            dataBaseHelperStudent.addStudent(new StudentModel(1, "Zabdi", "xcz789", "sci4356, bs2341, mat1234", "samp456"));
+            dataBaseHelperStudent.addStudent(new StudentModel(1, "John", "iuy724", "cs2345, cs7423, cs2345", "sdf234"));
             //studentModel = new StudentModel(-1, st_name, st_abc123, st_courses, true_eruID);
             //Toast.makeText( MainActivity.this, studentModel.toString() , Toast.LENGTH_SHORT).show();
         } catch (Exception e) {
@@ -75,11 +80,16 @@ public class MainActivity extends AppCompatActivity {
         MonsterModel monsterModel = new MonsterModel();
         try {
             //populate some data
-            dataBaseHelperMonster.addMonster(new MonsterModel(1, "dragon", "Cutie", 10, 1, "adorb123"));
-            dataBaseHelperMonster.addMonster(new MonsterModel(2, "mushroom", "Mushy", 1, 50, "sixx897"));
-            dataBaseHelperMonster.addMonster(new MonsterModel(3, "mushroom", "Bloop", 200, 100, "other234"));
-            dataBaseHelperMonster.addMonster(new MonsterModel(4, "dragon", "Eru", 500, 20, "samp456"));
-            dataBaseHelperMonster.addMonster(new MonsterModel(5, "dragon", "Drago", 75, 4, "sdf234"));
+            dataBaseHelperMonster.addMonster(new MonsterModel(1, "Erugon", "Cutie", 10, 1, "adorb123"));
+            dataBaseHelperMonster.addMonster(new MonsterModel(1, "Psilobite", "Mushy", 1, 50, "sixx897"));
+            dataBaseHelperMonster.addMonster(new MonsterModel(1, "Psilobite", "Bloop", 200, 100, "other234"));
+            dataBaseHelperMonster.addMonster(new MonsterModel(1, "Erugon", "Eru", 500, 20, "samp456"));
+            dataBaseHelperMonster.addMonster(new MonsterModel(1, "Erugon", "Drago", 75, 4, "sdf234"));
+            dataBaseHelperMonster.addMonster(new MonsterModel(1, "Psilobite", "Puppy", 10, 1, "sdf235"));
+            dataBaseHelperMonster.addMonster(new MonsterModel(1, "Psilobite", "Toothless", 1, 50, "dfg645"));
+            dataBaseHelperMonster.addMonster(new MonsterModel(1, "Psilobite", "Apple", 200, 100, "fgf976"));
+            dataBaseHelperMonster.addMonster(new MonsterModel(1, "Erugon", "Cookie", 500, 20, "hfg234"));
+            dataBaseHelperMonster.addMonster(new MonsterModel(1, "Erugon", "Normi", 75, 4, "jfg765"));
             //monsterModel = new MonsterModel(-1, species, nickname, -1, -1, true_eruID);
             //Toast.makeText( MainActivity.this, monsterModel.toString() , Toast.LENGTH_SHORT).show();
         } catch (Exception e) {

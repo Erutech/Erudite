@@ -152,7 +152,6 @@ public class DataBaseHelperMonster extends SQLiteOpenHelper {
     void addMonster(MonsterModel monsterModel) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
-        cv.put(COLUMN_ID, monsterModel.getId());
         cv.put(COLUMN_SPECIE_NAME, monsterModel.getSpecie());
         cv.put(COLUMN_NICKNAME, monsterModel.getNickname());
         cv.put(COLUMN_XP, monsterModel.getXP());
@@ -175,12 +174,11 @@ public class DataBaseHelperMonster extends SQLiteOpenHelper {
         if (cursor.moveToFirst()) {
             do {
                 MonsterModel monsterModel = new MonsterModel();
-                monsterModel.setId(Integer.parseInt(cursor.getString(0)));
-                monsterModel.setSpecie(cursor.getString(1));
-                monsterModel.setNickname(cursor.getString(2));
-                monsterModel.setXP(Integer.parseInt(cursor.getString(3)));
-                monsterModel.setLvl(Integer.parseInt(cursor.getString(4)));
-                monsterModel.setEruID(cursor.getString(5));
+                monsterModel.setSpecie(cursor.getString(0));
+                monsterModel.setNickname(cursor.getString(1));
+                monsterModel.setXP(Integer.parseInt(cursor.getString(2)));
+                monsterModel.setLvl(Integer.parseInt(cursor.getString(3)));
+                monsterModel.setEruID(cursor.getString(4));
                 // Adding contact to list
                 monsterList.add(monsterModel);
             } while (cursor.moveToNext());
