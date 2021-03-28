@@ -16,12 +16,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Erugon myErugon = new Erugon("Bud");
+        setProgressBar(myErugon);
 
 
-        mProgressBar = (ProgressBar) findViewById(R.id.progressBar3);
-        mProgressBar.setMax(myErugon.getXpMax());
-        myErugon.setXp(2);
-        mProgressBar.setProgress(myErugon.getXp());
+
 
 
 
@@ -29,5 +27,12 @@ public class MainActivity extends AppCompatActivity {
 
     public void openMenu() {
         //Intent intent = new Intent(this, menu)
+    }
+
+    public void setProgressBar(Erugon myErugon) {
+        mProgressBar = (ProgressBar) findViewById(R.id.progressBar3);
+        mProgressBar.setMax(myErugon.getXpMax());
+        myErugon.setXp(2);
+        mProgressBar.setProgress(myErugon.getXp());
     }
 }
