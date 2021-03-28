@@ -6,15 +6,20 @@ import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.example.erudite.ui.login.MonsterModel;
+
 public class MainActivity extends AppCompatActivity {
     // references to buttons and other controls on the layout
-    String true_name, true_abc123, true_courses, true_eruID; //should be changed to variable
+    String st_name, st_abc123, st_courses, true_eruID; //should be changed to variable
+    String species, nickname;
+    int m_xp, m_lvl;
 
     private Button menuBtn;
     private ProgressBar mProgressBar;
 
-    // create object for database
-    DataBaseHelper dataBaseHelper;
+    // create object for databases
+    DataBaseHelperStudent dataBaseHelperStudent;
+    DataBaseHelperMonster dataBaseHelperMonster;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,17 +34,32 @@ public class MainActivity extends AppCompatActivity {
         myErugon.setXp(2);
         mProgressBar.setProgress(myErugon.getXp());
 
-        dataBaseHelper = new DataBaseHelper(MainActivity.this);
+        // STUDENT TABLE
+        this.dataBaseHelperStudent = new DataBaseHelperStudent(MainActivity.this);
         StudentModel studentModel;
         try {
-            studentModel = new StudentModel(-1, true_name, true_abc123, true_courses, true_eruID);
+            studentModel = new StudentModel(-1, st_name, st_abc123, st_courses, true_eruID);
             Toast.makeText( MainActivity.this, studentModel.toString() , Toast.LENGTH_SHORT).show();
         } catch (Exception e) {
             studentModel = new StudentModel(-1, "error", "abc123", "course", "eru name");
             Toast.makeText( MainActivity.this, "Error creating student", Toast.LENGTH_SHORT).show();
         }
-        DataBaseHelper dataBaseHelper = new DataBaseHelper(MainActivity.this);
-        boolean sucess = dataBaseHelper.addOne(studentModel);
+        DataBaseHelperStudent dataBaseHelperStudent = new DataBaseHelperStudent(MainActivity.this);
+        boolean sucess = dataBaseHelperStudent.addOne(studentModel);
+
+        // MONSTER TABLE
+        this.dataBaseHelperMonster= new DataBaseHelperMonster(MainActivity.this);
+        MonsterModel monsterModel;
+        try {
+            monsterModel = new MonsterModel(-1, species, nickname, -1, -1, true_eruID);
+            Toast.makeText( MainActivity.this, monsterModel.toString() , Toast.LENGTH_SHORT).show();
+        } catch (Exception e) {
+            monsterModel = new MonsterModel(-1, "specie", "nickname", -1 , -1, "eru name");
+            Toast.makeText( MainActivity.this, "Error creating monster", Toast.LENGTH_SHORT).show();
+        }
+        DataBaseHelperMonster dataBaseHelperMonster = new DataBaseHelperMonster(MainActivity.this);
+        sucess = dataBaseHelperMonster.addOne(monsterModel);
+        
     }
     public void openMenu() {
         //Intent intent = new Intent(this, menu)

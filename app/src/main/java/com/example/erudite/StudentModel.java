@@ -15,8 +15,7 @@ public class StudentModel {
         this.courses = courses;
         this.eruID = eruID;
     }
-    public StudentModel() {
-    }
+    public StudentModel() {}
 
     // toString is necessary for printing the contents of a class object
     @Override

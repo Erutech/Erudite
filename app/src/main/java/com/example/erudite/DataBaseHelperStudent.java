@@ -14,7 +14,7 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.io.InputStream;
 
-public class DataBaseHelper extends SQLiteOpenHelper {
+public class DataBaseHelperStudent extends SQLiteOpenHelper {
     public static final String STUDENT_TABLE = "STUDENT_TABLE";
     public static final String COLUMN_ID = "ID";
     public static final String COLUMN_USER_NAME = "USER_NAME";
@@ -22,7 +22,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     public static final String COLUMN_USER_COURSES = "USER_COURSES";
     public static final String COLUMN_ERU_ID = "ERU_ID";
 
-    public DataBaseHelper(Context context) {
+    public DataBaseHelperStudent(Context context) {
         super(context, "student_users.db", null, 1);
     }
 
