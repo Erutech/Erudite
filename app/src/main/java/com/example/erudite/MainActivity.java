@@ -51,17 +51,24 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_menu);
 
 
-
+        /*
         mLevelup = findViewById(R.id.levelup);
 
         mProgressBar = findViewById(R.id.progressBar3);
         mLevelSwitch = findViewById(R.id.textSwitcher);
         Erugon myErugon = new Erugon("Bud");
 
-        /*
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                setProgressBar(myErugon, mLevelSwitch);
+            }
+        });*/
+
+
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
@@ -74,7 +81,8 @@ public class MainActivity extends AppCompatActivity {
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
-        NavigationUI.setupWithNavController(navigationView, navController);*/
+        NavigationUI.setupWithNavController(navigationView, navController);
+
         StudentModel studentModel;
         try {
             dataBaseHelperStudent.addStudent(new StudentModel(1, "Beth", "hrx876", "cs2312, cs3425", "adorb123"));
@@ -88,8 +96,8 @@ public class MainActivity extends AppCompatActivity {
             studentModel = new StudentModel(-1, "error", "abc123", "course", "eru name");
             Toast.makeText( MainActivity.this, "Error creating student", Toast.LENGTH_SHORT).show();
         }
-        DataBaseHelper dataBaseHelper = new DataBaseHelper(MainActivity.this);
-        boolean sucess = dataBaseHelper.addOne(studentModel);
+       // DataBaseHelper dataBaseHelper = new DataBaseHelper(MainActivity.this);
+        //boolean sucess = dataBaseHelper.addOne(studentModel);
     }
 
 
@@ -110,7 +118,8 @@ public class MainActivity extends AppCompatActivity {
             myErugon.setXp(startxp);
 
             mProgressBar.setProgress(startxp);
-            SystemClock.sleep(50);
+
+            android.os.SystemClock.sleep(50);
 
 
 
