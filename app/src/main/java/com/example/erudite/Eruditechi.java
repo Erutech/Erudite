@@ -23,7 +23,7 @@ public abstract class Eruditechi {
         return xp;
     }
 
-    public int getLvl(int lvl) {
+    public int getLvl() {
         return lvl;
     }
 
@@ -84,10 +84,12 @@ public abstract class Eruditechi {
 
     }
 
-    public void lvlup() {   
-        lvl++;
-        xpMax = lvl*5;
-        xp = 0;
+    public void lvlup() {
+        if(getLvl() <= 11) {
+            setLvl(getLvl() + 1);
+        }
+        setXpMax(getLvl()*5);
+        setXp(0);
         for(int i = 0; i < evolveLvls.length; i++) {
             if(evolveLvls[i] == lvl) {
                 evolve();

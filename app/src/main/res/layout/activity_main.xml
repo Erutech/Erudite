@@ -12,12 +12,14 @@
     <pl.droidsonroids.gif.GifImageView
         android:layout_width="175dp"
         android:layout_height="264dp"
-        android:src="@drawable/baby_erugon_animated"
+        android:src="@drawable/erugon_animated"
         app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/progressBar3"
         app:layout_constraintVertical_bias="0.769" />
+
+
 
     <TextView
         android:id="@+id/textView"
@@ -34,20 +36,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.847" />
 
-    <ProgressBar
-        android:id="@+id/progressBar3"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="299dp"
-        android:layout_height="13dp"
-        android:layout_marginStart="40dp"
-        android:paddingBottom="5dp"
-        android:progressDrawable="@drawable/customprogressbar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.236" />
 
     <TextView
         android:id="@+id/textView2"
@@ -72,6 +60,50 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/progressBar3"
         app:srcCompat="@drawable/erudite" />
+
+    <Button
+        android:id="@+id/levelup"
+        android:layout_width="448dp"
+        android:layout_height="990dp"
+        android:background="@color/cardview_dark_background"
+        android:text=" "
+        app:backgroundTint="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.749"
+        tools:visibility="visible" />
+
+    <TextSwitcher
+        android:id="@+id/textSwitcher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inAnimation="@android:anim/slide_out_right"
+        android:outAnimation="@android:anim/slide_out_right"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.337"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <ProgressBar
+        android:id="@+id/progressBar3"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="299dp"
+        android:layout_height="13dp"
+        android:layout_marginStart="40dp"
+        android:paddingBottom="5dp"
+        android:progressDrawable="@drawable/customprogressbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.236" />
+
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

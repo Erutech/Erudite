@@ -8,6 +8,7 @@ public class Erugon extends Eruditechi {
         setNickname(nickname);
         setXp(0);
         setXpMax(5);
+        setLvl(1);
         setCurrEvo("Egg");
         setImage("egg.png");
     }

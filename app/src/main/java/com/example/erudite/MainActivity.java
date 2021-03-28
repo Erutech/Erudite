@@ -8,10 +8,20 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+import android.graphics.Color;
 import android.os.Bundle;
+import android.view.Menu;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.Toast;
+import android.widget.TextView;
+import android.os.Handler;
+import android.widget.TextSwitcher;
+import android.widget.ViewSwitcher;
+import java.lang.Math;
+import android.app.Activity;
+import android.content.Intent;
+import android.view.View.OnClickListener;
 
 import com.google.android.material.navigation.NavigationView;
 
@@ -22,7 +32,16 @@ public class MainActivity extends AppCompatActivity {
     int m_xp, m_lvl;
 
     private AppBarConfiguration mAppBarConfiguration;
+
+    //Jason Stuff
+    private Button mLevelup;
     private ProgressBar mProgressBar;
+    private Handler mHandler = new Handler();
+    private TextSwitcher mLevelSwitch;
+    private int stringIndex = 0;
+    private String[] row = {"Level: 1", "Level: 2", "Level: 3", "Level: 4", "Level: 5", "Level: 6", "Level: 7", "Level: 8", "Level: 9", "Level: 10"};
+    private TextView mLevel;
+    private Button mNavstuff;
 
     // create object for databases
     DataBaseHelperStudent dataBaseHelperStudent;
@@ -30,31 +49,32 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_menu);
 
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+
+
+        mLevelup = findViewById(R.id.levelup);
+
+        mProgressBar = findViewById(R.id.progressBar3);
+        mLevelSwitch = findViewById(R.id.textSwitcher);
+        Erugon myErugon = new Erugon("Bud");
+
+        /*
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
+
+
         mAppBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.nav_home, R.id.nav_info, R.id.nav_profile)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
-        NavigationUI.setupWithNavController(navigationView, navController);
-/*
-        Erugon myErugon = new Erugon("Bud");
-        setProgressBar(myErugon);
-        mProgressBar = (ProgressBar) findViewById(R.id.progressBar3);
-        mProgressBar.setMax(myErugon.getXpMax());
-        myErugon.setXp(2);
-        mProgressBar.setProgress(myErugon.getXp());
-*/
-
-        // STUDENT TABLE
-        dataBaseHelperStudent = new DataBaseHelperStudent(MainActivity.this);
+        NavigationUI.setupWithNavController(navigationView, navController);*/
         StudentModel studentModel;
         try {
             dataBaseHelperStudent.addStudent(new StudentModel(1, "Beth", "hrx876", "cs2312, cs3425", "adorb123"));
@@ -68,39 +88,57 @@ public class MainActivity extends AppCompatActivity {
             studentModel = new StudentModel(-1, "error", "abc123", "course", "eru name");
             Toast.makeText( MainActivity.this, "Error creating student", Toast.LENGTH_SHORT).show();
         }
-        DataBaseHelperStudent dataBaseHelperStudent = new DataBaseHelperStudent(MainActivity.this);
-
-        // MONSTER TABLE
-        dataBaseHelperMonster = new DataBaseHelperMonster(MainActivity.this);
-        MonsterModel monsterModel = new MonsterModel();
-        try {
-            //populate some data
-            dataBaseHelperMonster.addMonster(new MonsterModel(1, "dragon", "Cutie", 10, 1, "adorb123"));
-            dataBaseHelperMonster.addMonster(new MonsterModel(2, "mushroom", "Mushy", 1, 50, "sixx897"));
-            dataBaseHelperMonster.addMonster(new MonsterModel(3, "mushroom", "Bloop", 200, 100, "other234"));
-            dataBaseHelperMonster.addMonster(new MonsterModel(4, "dragon", "Eru", 500, 20, "samp456"));
-            dataBaseHelperMonster.addMonster(new MonsterModel(5, "dragon", "Drago", 75, 4, "sdf234"));
-            //monsterModel = new MonsterModel(-1, species, nickname, -1, -1, true_eruID);
-            //Toast.makeText( MainActivity.this, monsterModel.toString() , Toast.LENGTH_SHORT).show();
-        } catch (Exception e) {
-            monsterModel = new MonsterModel(-1, "specie", "nickname", -1 , -1, "eru name");
-            Toast.makeText( MainActivity.this, "Error creating monster", Toast.LENGTH_SHORT).show();
-        }
-        //Toast.makeText( MainActivity.this, monsterModel.toString() , Toast.LENGTH_SHORT).show();
-        DataBaseHelperMonster dataBaseHelperMonster = new DataBaseHelperMonster(MainActivity.this);
+        DataBaseHelper dataBaseHelper = new DataBaseHelper(MainActivity.this);
+        boolean sucess = dataBaseHelper.addOne(studentModel);
     }
 
-    public void setProgressBar(Erugon myErugon) {
-        mProgressBar = (ProgressBar) findViewById(R.id.progressBar3);
+
+
+    public void setProgressBar(Erugon myErugon, TextSwitcher mLevelSwitch) {
+
         mProgressBar.setMax(myErugon.getXpMax());
-        myErugon.setXp(2);
         mProgressBar.setProgress(myErugon.getXp());
+
+        int gainedxp;
+        gainedxp = (int) Math.ceil(100/10);
+
+        for(int i = 0; i < gainedxp; i++) {
+
+            int startxp = myErugon.getXp();
+            startxp++;
+            System.out.println(startxp);
+            myErugon.setXp(startxp);
+
+            mProgressBar.setProgress(startxp);
+            SystemClock.sleep(50);
+
+
+
+            if(myErugon.getXpMax() == startxp) {
+                myErugon.lvlup();
+                mProgressBar.setProgress(0);
+                mProgressBar.setMax(myErugon.getLvl()*5);
+
+                if(myErugon.getLvl() != 10) {
+                    mHandler.post(new Runnable() {
+                        @Override
+                        public void run() {
+                            mLevelSwitch.setText(row[myErugon.getLvl()-1]);
+                        }
+                    });
+
+                }
+
+            }
+        }
+
     }
 
-    @Override
     public boolean onSupportNavigateUp() {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+
+
 }
