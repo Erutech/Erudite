@@ -110,13 +110,14 @@ give XP towards your eruditechi.The better you do, the quicker you level up!"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
+        android:layout_marginEnd="132dp"
         android:fontFamily="@font/asap_medium"
         android:text="Erugon Egg"
         android:textColor="#8D59BA"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@+id/textView9"
-        tools:layout_editor_absoluteX="177dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
