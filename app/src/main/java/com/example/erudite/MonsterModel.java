@@ -1,4 +1,4 @@
-package com.example.erudite.ui.login;
+package com.example.erudite;
 
 public class MonsterModel {
     private int id;
@@ -15,7 +15,7 @@ public class MonsterModel {
         this.specie = specie;
         this.nickname = nickname;
         this.XP = XP;
-        Lvl = lvl;
+        this.Lvl = lvl;
         this.eruID = eruID;
     }
 
