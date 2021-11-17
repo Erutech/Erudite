@@ -1,5 +1,6 @@
 # Erudite
-Erudite Project Repo for Rowdy Hacks SP2021
+Erudite Project Repo for Rowdy Hacks SP2021  ***HACKERS CHOICE WINNER***  
+https://devpost.com/software/erudite
 
 About the Project
 
